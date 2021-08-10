@@ -1,10 +1,10 @@
 .action-button {
-  @apply tw-rounded tw-py-10 tw-w-full;
+  @apply rounded py-10 w-full;
   color: white;
   &__pink {
-    @apply tw-bg-pink tw-text-white;
+    @apply text-white;
   }
   &__white {
-    @apply tw-bg-white tw-text-pink tw-border-pink tw-border-2;
+    @apply bg-white border-2;
   }
 }
