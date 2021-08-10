@@ -34,6 +34,7 @@ module.exports = {
         20: '20px',
         25: '25px',
         30: '30px',
+        section: '15px',
       },
       width: {
         half: '50%',
@@ -43,17 +44,13 @@ module.exports = {
       opacity: {
         20: '0.2',
       },
-      margin: {
-        'section-margin': '27px',
-      },
+      margin: {},
       colors: {
         pearl: '#FBEFF2',
         blue: '#3C7E8E',
         'deep-blue': '#173754',
       },
-      padding: {
-        'section-padding': '27px',
-      },
+      padding: {},
     },
   },
   variants: {
