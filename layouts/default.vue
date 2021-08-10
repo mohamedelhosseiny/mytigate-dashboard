@@ -5,7 +5,18 @@
     </aside>
     <main class="flex-grow flex flex-col">
       <mytigate-navbar />
-      <nuxt />
+      <div
+        class="
+          mt-20
+          md:mt-30
+          px-section
+          md:px-section-md
+          lg:px-section-lg
+          flex-grow
+        "
+      >
+        <nuxt />
+      </div>
       <mytigate-footer />
     </main>
   </div>

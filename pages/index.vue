@@ -1,5 +1,5 @@
 <template>
-  <div class="flex mt-20 md:mt-30 justify-center flex-grow">
+  <div class="flex justify-center">
     <h1 class="sr-only">Homepage</h1>
     <h2 class="text-deep-blue font-bold text-center mx-section-md text-1">
       Welcome To
