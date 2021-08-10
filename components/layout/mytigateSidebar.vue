@@ -1,5 +1,15 @@
 <template>
-  <div class="bg-deep-blue h-full">hi</div>
+  <div class="bg-deep-blue h-full pt-20 pl-10 pr-10">
+    <img class="mb-30" src="@/assets/images/logo.png" alt="Mytigate" />
+    <ul>
+      <li>
+        <nuxt-link class="text-white" to="/">Home</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link class="text-white" to="/dashboard">Dashboard</nuxt-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
