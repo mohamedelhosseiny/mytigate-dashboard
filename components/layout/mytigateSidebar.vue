@@ -1,5 +1,14 @@
 <template>
-  <div class="bg-deep-blue h-full pt-20 pl-10 pr-10">
+  <div
+    class="
+      bg-deep-blue
+      h-full
+      pt-20
+      px-section
+      md:px-section-md
+      lg:px-section-lg
+    "
+  >
     <img class="mb-30" src="@/assets/images/logo.png" alt="Mytigate" />
     <ul>
       <li class="flex items-center mb-15">

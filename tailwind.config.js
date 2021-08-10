@@ -35,6 +35,8 @@ module.exports = {
         25: '25px',
         30: '30px',
         section: '15px',
+        'section-md': '25px',
+        'section-lg': '40px',
       },
       width: {
         half: '50%',

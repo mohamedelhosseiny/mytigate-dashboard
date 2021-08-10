@@ -1,5 +1,16 @@
 <template>
-  <footer class="bg-pearl w-full sm:flex-row flex flex-col px-section py-20">
+  <footer
+    class="
+      bg-pearl
+      w-full
+      sm:flex-row
+      flex flex-col
+      md:px-section-md
+      lg:px-section-lg
+      px-section
+      py-20
+    "
+  >
     <div class="mb-20 mr-30">
       <ul class="text-deep-blue">
         <li>Version 1.1.0</li>
