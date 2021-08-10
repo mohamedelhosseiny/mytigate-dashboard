@@ -3,6 +3,7 @@
     <img class="mb-30" src="@/assets/images/logo.png" alt="Mytigate" />
     <ul>
       <li>
+        <svg-component icon="home" />
         <nuxt-link class="text-white" to="/">Home</nuxt-link>
       </li>
       <li>
