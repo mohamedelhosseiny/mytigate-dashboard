@@ -3,9 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
-      1: '20px',
-      2: '16px',
-      3: '12px',
+      1: '22px',
+      2: '18px',
+      3: '14px',
     },
     screens: {
       sm: '640px',
