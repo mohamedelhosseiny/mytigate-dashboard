@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="flex">
+    <aside>
+      <mytigate-sidebar />
+    </aside>
+    <main>
+      <mytigate-navbar />
+      <nuxt />
+      <mytigate-footer />
+    </main>
   </div>
 </template>
 
 <script>
-// import nuxtHeader from "@/components/layout/nuxtHeader.vue";
-// import nuxtFooter from "@/components/layout/nuxtFooter.vue";
+import mytigateNavbar from '@/components/layout/mytigateNavbar.vue'
+import mytigateFooter from '@/components/layout/mytigateFooter.vue'
+import mytigateSidebar from '@/components/layout/mytigateSidebar.vue'
 
 export default {
-  head: {
-    // link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
-  },
   components: {
-    // nuxtFooter,
-    // nuxtHeader,
+    mytigateFooter,
+    mytigateNavbar,
+    mytigateSidebar,
   },
 }
 </script>
