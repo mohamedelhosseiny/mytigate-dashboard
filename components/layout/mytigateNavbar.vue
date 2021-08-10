@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex pt-20 border-b pb-15">
-    <div class="ml-auto">
+    <div class="ml-section sm:ml-auto">
       <svg-component icon="notification" />
     </div>
     <div class="flex items-center ml-10">
