@@ -50,6 +50,7 @@ module.exports = {
       colors: {
         pearl: '#FBEFF2',
         blue: '#3C7E8E',
+        gray: 'gray',
         'deep-blue': '#173754',
       },
       padding: {},

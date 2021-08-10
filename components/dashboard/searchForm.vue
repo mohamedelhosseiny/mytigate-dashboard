@@ -10,15 +10,18 @@
           v-model="query"
         />
         <svg-component class="search_icon" icon="search" />
-        <div v-if="query" class="list border">
+        <div v-if="query" class="list border z-10 bg-white">
           <p
             v-for="(country, index) in filteredCountries"
             @click="chooseCountry(country)"
             v-if="!isCountryChosen && index < 10"
-            class="py-10 border-b cursor-pointer"
+            class="py-10 border-b border-pearl cursor-pointer"
           >
             <strong>{{ country.substr(0, query.length) }}</strong
             >{{ country.substr(query.length) }}
+            <span class="float-right text-gray mr-10 italic text-3"
+              >Click to choose</span
+            >
           </p>
         </div>
       </div>
@@ -26,6 +29,18 @@
         Search
       </button>
     </form>
+    <div class="mt-10">
+      <span
+        v-for="country in chosenCountries"
+        class="bg-gray mr-5 rounded py-5 px-10 text-white"
+        >{{ country }}
+        <span
+          class="font-bold ml-5 cursor-pointer"
+          @click="unselectCountry(country)"
+          >x</span
+        >
+      </span>
+    </div>
   </div>
 </template>
 
@@ -45,8 +60,18 @@ export default {
     },
   },
   methods: {
+    unselectCountry(country) {
+      let filteredArray = this.chosenCountries.filter((arrayCountry) => {
+        return arrayCountry !== country
+      })
+      console.log(filteredArray)
+      this.chosenCountries = filteredArray
+    },
     chooseCountry(country) {
-      this.query = country
+      this.query = ''
+      if (!this.chosenCountries.includes(country)) {
+        this.chosenCountries.push(country)
+      }
       this.isCountryChosen = true
     },
   },
@@ -54,6 +79,7 @@ export default {
     return {
       query: '',
       countries,
+      chosenCountries: [],
       isCountryChosen: false,
     }
   },
