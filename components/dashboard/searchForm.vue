@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form id="search_form" @submit.prevent class="flex">
+    <form id="search_form" @submit.prevent="fetchCountriesInfo" class="flex">
       <div class="relative w-full search">
         <input
           placeholder="Search..."
@@ -65,6 +65,9 @@ export default {
     },
   },
   methods: {
+    fetchCountriesInfo() {
+      this.$store.dispatch('fetchCountriesInfo')
+    },
     unselectCountry(country) {
       let filteredArray = this.chosenCountries.filter((arrayCountry) => {
         return arrayCountry !== country
