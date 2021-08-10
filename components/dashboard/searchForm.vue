@@ -14,7 +14,7 @@
     </div>
     <template v-if="query">
       <div v-for="(country, index) in filteredCountries" class="autocomplete">
-        <p>
+        <p v-if="index < 10">
           <strong>{{ country.substr(0, query.length) }}</strong
           >{{ country.substr(query.length) }}
         </p>
