@@ -1,0 +1,10 @@
+.action-button {
+  @apply rounded py-10 w-full;
+  color: white;
+  &__pink {
+    @apply text-white;
+  }
+  &__white {
+    @apply bg-white border-2;
+  }
+}
