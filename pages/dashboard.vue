@@ -1,14 +1,17 @@
 <template>
   <div>
     <search-form />
-    <!-- <resu /> -->
+    <search-results />
   </div>
 </template>
 
 <script>
 import searchForm from '@/components/dashboard/searchForm.vue'
+import searchResults from '@/components/dashboard/searchResults.vue'
+
 export default {
   components: {
+    searchResults,
     searchForm,
   },
 }

@@ -10,7 +10,7 @@ export const mutations = {
     state.chosenCountries = payload
   },
   setSearchResults(state, countries) {
-    searchResults = countries
+    state.searchResults = countries
   },
 }
 
