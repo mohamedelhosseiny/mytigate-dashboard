@@ -68,6 +68,12 @@ export default {
       outline-color: rgba(0, 0, 0, 0.2);
     }
   }
+  .list {
+    position: absolute;
+    top: 100%;
+    padding-left: 35px;
+    width: 100%;
+  }
   &_icon {
     position: absolute;
     left: 10px;
