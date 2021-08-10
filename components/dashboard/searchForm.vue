@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex">
+    <form id="search_form" @submit.prevent class="flex">
       <div class="relative w-full search">
         <input
           placeholder="Search..."
@@ -10,20 +10,22 @@
           v-model="query"
         />
         <svg-component class="search_icon" icon="search" />
+        <div v-if="query" class="list border">
+          <p
+            v-for="(country, index) in filteredCountries"
+            @click="chooseCountry(country)"
+            v-if="!isCountryChosen && index < 10"
+            class="py-10 border-b cursor-pointer"
+          >
+            <strong>{{ country.substr(0, query.length) }}</strong
+            >{{ country.substr(query.length) }}
+          </p>
+        </div>
       </div>
-      <button class="bg-blue text-white rounded py-10 px-15">Search</button>
-    </div>
-    <template v-if="query">
-      <div v-for="(country, index) in filteredCountries" class="autocomplete">
-        <p
-          @click="chooseCountry(country)"
-          v-if="!isCountryChosen && index < 10"
-        >
-          <strong>{{ country.substr(0, query.length) }}</strong
-          >{{ country.substr(query.length) }}
-        </p>
-      </div>
-    </template>
+      <button type="submit" class="bg-blue text-white rounded py-10 px-15">
+        Search
+      </button>
+    </form>
   </div>
 </template>
 
