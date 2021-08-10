@@ -59,6 +59,11 @@ export default {
       return countries
     },
   },
+  watch: {
+    chosenCountries(value) {
+      this.$store.commit('updateChosenCountries', value)
+    },
+  },
   methods: {
     unselectCountry(country) {
       let filteredArray = this.chosenCountries.filter((arrayCountry) => {
