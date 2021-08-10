@@ -13,12 +13,8 @@
       <button class="bg-blue text-white rounded py-10 px-15">Search</button>
     </div>
     <template v-if="query">
-      <div v-for="country in countries" class="autocomplete">
-        <p
-          v-if="
-            country.substr(0, query.length).toUpperCase() == query.toUpperCase()
-          "
-        >
+      <div v-for="(country, index) in filteredCountries" class="autocomplete">
+        <p>
           <strong>{{ country.substr(0, query.length) }}</strong
           >{{ country.substr(query.length) }}
         </p>
@@ -29,6 +25,17 @@
 
 <script>
 export default {
+  computed: {
+    filteredCountries() {
+      let countries = this.countries.filter((country) => {
+        return (
+          country.substr(0, this.query.length).toLowerCase() ==
+          this.query.toLowerCase()
+        )
+      })
+      return countries
+    },
+  },
   data() {
     return {
       query: '',
