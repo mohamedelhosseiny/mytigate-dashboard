@@ -1,9 +1,9 @@
 <template>
-  <div class="flex">
+  <div class="flex max-h-screen h-screen max-w-screen w-screen">
     <aside>
       <mytigate-sidebar />
     </aside>
-    <main>
+    <main class="flex-grow flex flex-col">
       <mytigate-navbar />
       <nuxt />
       <mytigate-footer />

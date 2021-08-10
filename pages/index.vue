@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="text-deep-blue">deep blue</h1>
+  <div class="flex-grow">
+    <h1 class="text-deep-blue\">deep blue</h1>
   </div>
 </template>
 
