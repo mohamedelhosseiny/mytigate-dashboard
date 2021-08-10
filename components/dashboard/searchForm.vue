@@ -6,6 +6,7 @@
           placeholder="Search..."
           class="rounded-l pr-15 py-10 border w-full"
           type="text"
+          @keyup="isCountryChosen = false"
           v-model="query"
         />
         <svg-component class="search_icon" icon="search" />
@@ -14,7 +15,10 @@
     </div>
     <template v-if="query">
       <div v-for="(country, index) in filteredCountries" class="autocomplete">
-        <p v-if="index < 10">
+        <p
+          @click="chooseCountry(country)"
+          v-if="!isCountryChosen && index < 10"
+        >
           <strong>{{ country.substr(0, query.length) }}</strong
           >{{ country.substr(query.length) }}
         </p>
@@ -38,10 +42,17 @@ export default {
       return countries
     },
   },
+  methods: {
+    chooseCountry(country) {
+      this.query = country
+      this.isCountryChosen = true
+    },
+  },
   data() {
     return {
       query: '',
       countries,
+      isCountryChosen: false,
     }
   },
 }
