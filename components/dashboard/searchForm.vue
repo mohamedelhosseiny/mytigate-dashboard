@@ -12,7 +12,7 @@
             w-full
           "
           type="text"
-          @keyup="isCountryChosen = false"
+          @keydown="isCountryChosen = false"
           v-model="query"
           ref="searchInput"
         />
