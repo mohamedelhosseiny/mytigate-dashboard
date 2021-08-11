@@ -1,5 +1,14 @@
 <template>
-  <div class="w-full pt-20 border-b pb-15 flex justify-end">
+  <div
+    class="
+      w-full
+      pt-20
+      border-b border-black border-opacity-20
+      pb-15
+      flex
+      justify-end
+    "
+  >
     <div class="ml-section flex items-center sm:ml-auto">
       <div>
         <svg-component icon="notification" />
