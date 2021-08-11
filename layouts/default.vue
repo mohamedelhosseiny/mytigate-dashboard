@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-h-screen h-screen max-w-screen w-screen">
+  <div class="flex min-h-screen">
     <aside>
       <mytigate-sidebar />
     </aside>

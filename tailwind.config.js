@@ -34,6 +34,7 @@ module.exports = {
         20: '20px',
         25: '25px',
         30: '30px',
+        75: '75px',
         section: '15px',
         'section-md': '25px',
         'section-lg': '40px',
@@ -50,6 +51,7 @@ module.exports = {
       colors: {
         pearl: '#FBEFF2',
         blue: '#3C7E8E',
+        gray: 'gray',
         'deep-blue': '#173754',
       },
       padding: {},

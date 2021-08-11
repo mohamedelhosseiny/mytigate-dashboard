@@ -11,7 +11,7 @@
       py-20
     "
   >
-    <div class="mb-20 mr-30">
+    <div class="mb-20 mr-30 md:mr-75">
       <ul class="text-deep-blue">
         <li>Version 1.1.0</li>
         <li><a href="mailto:support@mytigate.com">Support@mytigate.com</a></li>
