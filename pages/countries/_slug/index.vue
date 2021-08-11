@@ -1,14 +1,17 @@
 <template>
   <div>
-    <h1 class="font-bold text-center">{{ country.country }}</h1>
+    <h1 class="font-bold text-center mb-30">{{ country.country }}</h1>
     <div class="canvas_wrapper mb-40">
+      <h2 class="text-1 font-bold text-center">Total cases</h2>
       <canvas id="cases"></canvas>
     </div>
     <div class="canvas_wrapper mb-40">
-      <canvas id="deaths"></canvas>
+      <h2 class="text-1 font-bold text-center text-blue">Recoveries</h2>
+      <canvas id="recoveries"></canvas>
     </div>
     <div class="canvas_wrapper mb-40">
-      <canvas id="recoveries"></canvas>
+      <h2 class="text-1 font-bold text-center text-red">Deaths</h2>
+      <canvas id="deaths"></canvas>
     </div>
   </div>
 </template>
@@ -62,6 +65,9 @@ export default {
 }
 h1 {
   font-size: 40px;
+}
+h2 {
+  font-size: 32px;
 }
 canvas {
   // width: 100%;
