@@ -12,6 +12,7 @@
             w-full
           "
           type="text"
+          :value="query"
           @input="setQuery($event)"
           @keydown="isCountryChosen = false"
           ref="searchInput"
@@ -22,7 +23,7 @@
             v-for="(country, index) in filteredCountries"
             @click="chooseCountry(country)"
             v-if="!isCountryChosen && index < 10"
-            class="py-10 border-b border-pearl cursor-pointer"
+            class="py-10 border-b border-pearl cursor-pointer hover:bg-pearl"
           >
             <strong>{{ country.substr(0, query.length) }}</strong
             >{{ country.substr(query.length) }}
@@ -39,7 +40,7 @@
     <div class="mt-10">
       <span
         v-for="country in chosenCountries"
-        class="bg-gray mr-5 rounded py-5 px-10 text-white"
+        class="bg-gray inline-block mt-5 mr-5 rounded py-5 px-10 text-white"
         >{{ country }}
         <span
           class="font-bold ml-5 cursor-pointer"
@@ -117,8 +118,10 @@ export default {
   .list {
     position: absolute;
     top: 100%;
-    padding-left: 35px;
     width: 100%;
+    p {
+      padding-left: 35px;
+    }
   }
   &_icon {
     position: absolute;
