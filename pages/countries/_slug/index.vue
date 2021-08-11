@@ -1,8 +1,14 @@
 <template>
   <div>
     <h1 class="font-bold text-center">{{ country.country }}</h1>
-    <div class="canvas_wrapper">
-      <canvas id="chart"></canvas>
+    <div class="canvas_wrapper mb-40">
+      <canvas id="cases"></canvas>
+    </div>
+    <div class="canvas_wrapper mb-40">
+      <canvas id="deaths"></canvas>
+    </div>
+    <div class="canvas_wrapper mb-40">
+      <canvas id="recoveries"></canvas>
     </div>
   </div>
 </template>
@@ -18,23 +24,31 @@ export default {
     }
   },
   mounted() {
-    var canvas = document.getElementById('chart')
+    this.generateChart('cases', 'cases')
+    this.generateChart('deaths', 'deaths')
+    this.generateChart('recoveries', 'recovered')
+  },
+  methods: {
+    generateChart(elementId, chartData) {
+      var canvas = document.getElementById(elementId)
 
-    var chart = new Chart(canvas, {
-      type: 'line',
-      data: {
-        labels: Object.keys(this.country.timeline.cases),
-        datasets: [
-          {
-            data: Object.values(this.country.timeline.cases),
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-      },
-    })
+      new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: Object.keys(this.country.timeline[chartData]),
+          datasets: [
+            {
+              label: chartData,
+              data: Object.values(this.country.timeline[chartData]),
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      })
+    },
   },
 }
 </script>
@@ -42,9 +56,8 @@ export default {
 <style lang="scss" scoped>
 .canvas_wrapper {
   width: 95%;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  height: 400px;
+  margin: 0 auto 50px auto;
+  // height: 400px;
   position: relative;
 }
 h1 {
