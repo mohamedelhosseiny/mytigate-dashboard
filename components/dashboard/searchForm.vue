@@ -12,6 +12,7 @@
             w-full
           "
           type="text"
+          :value="query"
           @input="setQuery($event)"
           @keydown="isCountryChosen = false"
           ref="searchInput"
@@ -39,7 +40,7 @@
     <div class="mt-10">
       <span
         v-for="country in chosenCountries"
-        class="bg-gray mr-5 rounded py-5 px-10 text-white"
+        class="bg-gray inline-block mt-5 mr-5 rounded py-5 px-10 text-white"
         >{{ country }}
         <span
           class="font-bold ml-5 cursor-pointer"
