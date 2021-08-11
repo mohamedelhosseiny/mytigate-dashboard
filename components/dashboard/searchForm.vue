@@ -4,7 +4,13 @@
       <div class="relative w-full search">
         <input
           placeholder="Search..."
-          class="rounded-l pr-15 py-10 border w-full"
+          class="
+            rounded-l
+            pr-15
+            py-10
+            border border-opacity-20 border-black
+            w-full
+          "
           type="text"
           @keyup="isCountryChosen = false"
           v-model="query"
@@ -102,7 +108,7 @@ export default {
   input {
     padding-left: 35px;
     &:focus {
-      outline-color: rgba(0, 0, 0, 0.2);
+      outline-color: rgba(0, 0, 0, 0.3);
     }
   }
   .list {
