@@ -9,7 +9,9 @@
       px-section
       md:px-section-md
       lg:px-section-lg
+      z-30
     "
+    :class="isSidebarOpen && 'active'"
   >
     <img class="mb-30" src="@/assets/images/logo.png" alt="Mytigate" />
     <ul>
@@ -22,7 +24,7 @@
         <nuxt-link class="text-white" to="/dashboard">Dashboard</nuxt-link>
       </li>
     </ul>
-    <div class="sidebar_burger">
+    <div class="sidebar_burger" @click="isSidebarOpen = !isSidebarOpen">
       <div class="sidebar_burger_bar mb-5"></div>
       <div class="sidebar_burger_bar"></div>
     </div>
@@ -30,7 +32,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isSidebarOpen: false,
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -38,6 +46,14 @@ export default {}
   font-weight: bold;
 }
 .sidebar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateX(-100%);
+  transition: 0.3s ease all;
+  &.active {
+    transform: translateX(0%);
+  }
   &_burger {
     position: absolute;
     top: 40px;

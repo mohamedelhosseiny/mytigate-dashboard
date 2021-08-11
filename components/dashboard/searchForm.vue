@@ -16,7 +16,7 @@
           v-model="query"
           ref="searchInput"
         />
-        <svg-component class="search_icon" icon="search" />
+        <svg-component class="search_icon z-20" icon="search" />
         <div v-if="query" class="list border z-10 bg-white">
           <p
             v-for="(country, index) in filteredCountries"
@@ -122,7 +122,6 @@ export default {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 999;
   }
 }
 </style>
