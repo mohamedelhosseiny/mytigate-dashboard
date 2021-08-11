@@ -24,10 +24,7 @@
         <nuxt-link class="text-white" to="/dashboard">Dashboard</nuxt-link>
       </li>
     </ul>
-    <div
-      class="sidebar_burger flex sm:hidden"
-      @click="isSidebarOpen = !isSidebarOpen"
-    >
+    <div class="sidebar_burger" @click="isSidebarOpen = !isSidebarOpen">
       <div class="sidebar_burger_bar mb-5"></div>
       <div class="sidebar_burger_bar"></div>
     </div>
@@ -65,6 +62,10 @@ export default {
     transform: translateX(0%);
   }
   &_burger {
+    @media screen and (min-width: 640px) {
+      display: none;
+    }
+    display: flex;
     position: absolute;
     top: 20px;
     right: 0px;
