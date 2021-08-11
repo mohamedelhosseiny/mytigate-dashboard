@@ -9,7 +9,7 @@
         v-if="$store.state.searchResults.length > 0"
       >
         <card
-          class="w-one-third"
+          class="w-full sm:w-half md:w-one-third h-full"
           v-for="country in $store.state.searchResults"
           :key="country._id"
           :country="country"
