@@ -38,6 +38,11 @@ export default {
       isSidebarOpen: false,
     }
   },
+  watch: {
+    $route() {
+      this.isSidebarOpen = false
+    },
+  },
 }
 </script>
 
@@ -56,7 +61,7 @@ export default {
   }
   &_burger {
     position: absolute;
-    top: 40px;
+    top: 20px;
     right: 0px;
     padding: 10px;
     background-color: var(--deep-blue);
