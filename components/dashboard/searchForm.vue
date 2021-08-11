@@ -23,7 +23,7 @@
             v-for="(country, index) in filteredCountries"
             @click="chooseCountry(country)"
             v-if="!isCountryChosen && index < 10"
-            class="py-10 border-b border-pearl cursor-pointer"
+            class="py-10 border-b border-pearl cursor-pointer hover:bg-pearl"
           >
             <strong>{{ country.substr(0, query.length) }}</strong
             >{{ country.substr(query.length) }}
@@ -118,8 +118,10 @@ export default {
   .list {
     position: absolute;
     top: 100%;
-    padding-left: 35px;
     width: 100%;
+    p {
+      padding-left: 35px;
+    }
   }
   &_icon {
     position: absolute;
