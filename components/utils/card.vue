@@ -10,13 +10,16 @@
         :alt="country.country"
       />
       <p class="text-center text-black text-1 mt-20 mb-10">
-        Total cases: <strong>{{ country.cases }}</strong>
+        Total cases:
+        <strong>{{ new Intl.NumberFormat().format(country.cases) }}</strong>
       </p>
       <p class="text-center text-blue text-1 mt-20 mb-10">
-        Recovered: <strong>{{ country.recovered }}</strong>
+        Recovered:
+        <strong>{{ new Intl.NumberFormat().format(country.recovered) }}</strong>
       </p>
       <p class="text-center text-red text-1 mt-20 mb-10">
-        Deaths: <strong>{{ country.deaths }}</strong>
+        Deaths:
+        <strong>{{ new Intl.NumberFormat().format(country.deaths) }}</strong>
       </p>
       <!-- { "updated": 1628607707617, "country": "France", "countryInfo": { "_id":
         250, "iso2": "FR", "iso3": "FRA", "lat": 46, "long": 2, "flag":
