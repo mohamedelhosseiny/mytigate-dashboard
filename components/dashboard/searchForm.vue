@@ -12,8 +12,8 @@
             w-full
           "
           type="text"
+          @input="setQuery($event)"
           @keydown="isCountryChosen = false"
-          v-model="query"
           ref="searchInput"
         />
         <svg-component class="search_icon z-20" icon="search" />
@@ -72,6 +72,9 @@ export default {
     },
   },
   methods: {
+    setQuery(event) {
+      this.query = event.target.value
+    },
     fetchCountriesInfo() {
       if (this.chosenCountries.length > 0) {
         this.$store.dispatch('fetchCountriesInfo')
