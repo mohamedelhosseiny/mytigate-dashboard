@@ -1,6 +1,9 @@
 <template>
   <div class="p-5">
-    <div class="card rounded flex items-center flex-col p-20 bg-white">
+    <nuxt-link
+      :to="`/countries/${country.country}`"
+      class="card rounded flex items-center flex-col p-20 bg-white"
+    >
       <h2 class="text-center font-bold mb-10 text-black text-1">
         {{ country.country }}
       </h2>
@@ -31,7 +34,7 @@
         "continent": "Europe", "oneCasePerPeople": 10, "oneDeathPerPeople": 583,
         "oneTestPerPeople": 1, "activePerOneMillion": 6432.08,
         "recoveredPerOneMillion": 88300.46, "criticalPerOneMillion": 25.48 } -->
-    </div>
+    </nuxt-link>
   </div>
 </template>
 
