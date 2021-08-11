@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'jit',
+  // mode: 'jit',
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
@@ -53,6 +53,7 @@ module.exports = {
         blue: '#3C7E8E',
         gray: 'gray',
         'deep-blue': '#173754',
+        red: 'red',
       },
       padding: {},
     },
