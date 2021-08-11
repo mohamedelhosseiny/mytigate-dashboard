@@ -66,7 +66,9 @@ export default {
   },
   methods: {
     fetchCountriesInfo() {
-      this.$store.dispatch('fetchCountriesInfo')
+      if (this.chosenCountries.length > 0) {
+        this.$store.dispatch('fetchCountriesInfo')
+      }
     },
     unselectCountry(country) {
       let filteredArray = this.chosenCountries.filter((arrayCountry) => {
