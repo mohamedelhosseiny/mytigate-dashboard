@@ -24,7 +24,10 @@
         <nuxt-link class="text-white" to="/dashboard">Dashboard</nuxt-link>
       </li>
     </ul>
-    <div class="sidebar_burger" @click="isSidebarOpen = !isSidebarOpen">
+    <div
+      class="sidebar_burger flex sm:hidden"
+      @click="isSidebarOpen = !isSidebarOpen"
+    >
       <div class="sidebar_burger_bar mb-5"></div>
       <div class="sidebar_burger_bar"></div>
     </div>
@@ -51,11 +54,13 @@ export default {
   font-weight: bold;
 }
 .sidebar {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  transform: translateX(-100%);
-  transition: 0.3s ease all;
+  @media screen and (max-width: 640px) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.3s ease all;
+    transform: translateX(-100%);
+  }
   &.active {
     transform: translateX(0%);
   }
@@ -66,7 +71,6 @@ export default {
     padding: 10px;
     background-color: var(--deep-blue);
     transform: translateX(100%);
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     &_bar {
