@@ -40,9 +40,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.canvas_wrapper {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  height: 400px;
+  position: relative;
+}
+h1 {
+  font-size: 40px;
+}
 canvas {
-  width: 100%;
-  height: 300px;
-  border: 1px solid black;
+  // width: 100%;
+  // height: 300px;
+  // border: 1px solid black;
 }
 </style>
