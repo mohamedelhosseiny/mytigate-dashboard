@@ -26,6 +26,11 @@ export default {
       country: result.data,
     }
   },
+  head() {
+    return {
+      title: this.country.country,
+    }
+  },
   mounted() {
     this.generateChart('cases', 'cases')
     this.generateChart('deaths', 'deaths')
