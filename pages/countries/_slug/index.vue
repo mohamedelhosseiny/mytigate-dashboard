@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ $route.params.slug }}
+    <h1 class="font-bold text-center">{{ country.country }}</h1>
     <div class="canvas_wrapper">
       <canvas id="chart"></canvas>
     </div>
