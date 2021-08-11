@@ -8,6 +8,7 @@
           type="text"
           @keyup="isCountryChosen = false"
           v-model="query"
+          ref="searchInput"
         />
         <svg-component class="search_icon" icon="search" />
         <div v-if="query" class="list border z-10 bg-white">
@@ -74,7 +75,6 @@ export default {
       let filteredArray = this.chosenCountries.filter((arrayCountry) => {
         return arrayCountry !== country
       })
-      console.log(filteredArray)
       this.chosenCountries = filteredArray
     },
     chooseCountry(country) {
@@ -83,6 +83,7 @@ export default {
         this.chosenCountries.push(country)
       }
       this.isCountryChosen = true
+      this.$refs.searchInput.focus()
     },
   },
   data() {
